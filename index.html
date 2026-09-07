@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Just+Another+Hand&family=Ma+Shan+Zheng&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <h1>Hello there !</h1>
+
+    <div class="hero-text">
+        <p>Hi there ! I'm Aung Khanth, self-learning web developer and a collage student. </p>
+        <p>This is my personal website. You can explore about me.</p>
+        <p>Enjoy the journey.....!</p>
+    </div>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <a href="aboutme.html" class="chapter-card about-me">
+                    <img src="./image/about-me.png" alt="about-me">
+                </a>
+            </div>
+
+
+            <div class="swiper-slide">
+                <a href="portfolio.html" class="chapter-card portfolio">
+                    <img src="./image/portfolio.png" alt="portfolio">
+                </a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="how-I-work.html" class="chapter-card how-I-work">
+                    <img src="./image/how-I-work.png" alt="how-I-work">
+                </a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="contact.html" class="chapter-card contact">
+                    <img src="./image/contact.png" alt="contact">
+                </a>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+<div class="all_labs">
+    <h2 class="labs">Labs</h2>
+
+    <div class="lab" id="lab">
+
+
+        <h4 class="lab-number">lab 01</h4>
+
+        <div class="Lab01">
+
+
+            <h3 class="lab-text">Will you be my valentine?</h3>
+
+            <div class="options">
+                <button type="button" id="yesBtn" onclick="console.log('Yes')">Yes</button>
+                <button type="button" id="noBtn" onclick="console.log('No')">No</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="lab" >
+
+
+        <h4 class="lab-number">lab 02</h4>
+
+        <div class="Lab01">
+
+
+            <h3 class="lab-text">To be Continue .... <continue class=""></continue></h3>
+
+           
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            cssMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
+
+
+        const noBtn = document.getElementById("noBtn");
+        const labBox = document.getElementById("lab");
+
+        noBtn.addEventListener("mouseenter", () => {
+            noBtn.style.position = "absolute";
+            const parentRect = labBox.getBoundingClientRect();
+            console.log(parentRect)
+            const btnRect = noBtn.getBoundingClientRect();
+
+            const maxX = parentRect.width - btnRect.width;
+            const maxY = parentRect.height - btnRect.height;
+
+            // Random X and Y inside container
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+
+            noBtn.style.left = randomX + "px";
+            noBtn.style.top = randomY + "px";
+        });
+    </script>
+</body>
+
+</html>

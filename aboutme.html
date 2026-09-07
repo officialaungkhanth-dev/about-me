@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="aboutme.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Just+Another+Hand&family=Ma+Shan+Zheng&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <h1>Still here!</h1>
+
+    <div class="Intro">
+        <p>
+            <span class="primary">I live quietly.</span><br><br>
+
+            <span class="secondary">I overthink, I disappear,</span><br>
+            <span class="secondary">and I build anyway.</span><br><br>
+
+            <span class="secondary">Letters, books, music, guitar —</span><br>
+            <span class="muted">that’s how I release what I don’t say.</span>
+        </p>
+    </div>
+
+    <div class="main">
+
+
+        <div class="about-image">
+            <img src="./image/my-image.png" alt="portrait" />
+        </div>
+
+
+
+        <div class="about-text">
+            <p>
+                I’m a junior web developer and a college student.
+            </p>
+
+            <p>
+                Most of my life happens in silence.
+            </p>
+
+            <p>
+                I don’t show up often.<br>
+                I don’t speak unless I have to.<br>
+                And even when I do,<br>
+                I leave most things unsaid.
+            </p>
+
+            <p>
+                It’s not that there’s nothing inside —<br>
+                it’s the opposite.
+            </p>
+
+            <p>
+                There’s too much.
+            </p>
+
+            <p>
+                Too many thoughts,<br>
+                too many things that don’t settle,<br>
+                too many things that don’t have a place to go.
+            </p>
+
+            <p>
+                I learned to keep them there.
+            </p>
+
+            <p>
+                I rarely open up to people.<br>
+                Once, I did.
+            </p>
+
+            <p>
+                I trusted one person enough to give everything —<br>
+                not just words, but everything I kept hidden.
+            </p>
+
+            <p>
+                When it broke,<br>
+                it didn’t leave the way things usually do.
+            </p>
+
+            <p>
+                It stayed.
+            </p>
+
+            <p>
+                Not loudly.<br>
+                Not visibly.<br>
+                Just something quiet,<br>
+                always there,<br>
+                never fully gone.
+            </p>
+
+            <p>
+                Since then,<br>
+                I’ve stopped trying to explain what’s inside.
+            </p>
+
+            <p>
+                I carry it instead.
+            </p>
+
+            <p>
+                Silently.
+            </p>
+
+            <p>
+                Most days, I exist somewhere between thinking and disappearing.<br>
+                Not fully here,<br>
+                not fully gone.
+            </p>
+
+            <p>
+                Just… present enough.
+            </p>
+
+            <p>
+                So I find other ways to let things out.
+            </p>
+
+            <p>
+                I write letters I never send.<br>
+                I read to slow down my mind.<br>
+                I listen to music when silence becomes too heavy.<br>
+                Sometimes I play guitar,<br>
+                just to turn whatever’s inside<br>
+                into something that doesn’t stay trapped.
+            </p>
+
+            <p>
+                I don’t express things the way people expect.
+            </p>
+
+            <p>
+                I don’t talk much.<br>
+                I don’t show much.
+            </p>
+
+            <p>
+                But I build.
+            </p>
+
+            <p class="fade">
+                And whatever I can’t say,<br>
+                whatever doesn’t fit into words,<br>
+                whatever stays unfinished inside me —
+            </p>
+
+            <p class="fade">it ends up there.</p>
+        </div>
+
+
+
+
+    </div>
+
+    <a href="index.html" class="back-btn">← return</a>
+
+
+
+<script>
+  const links = document.querySelectorAll("a");
+
+  links.forEach(link => {
+    link.addEventListener("click", function(e) {
+      const href = this.getAttribute("href");
+
+      if (href && href.includes("about")) {
+        e.preventDefault();
+
+        document.body.classList.add("fade-out");
+
+        setTimeout(() => {
+          window.location.href = href;
+        }, 600);
+      }
+    });
+  });
+
+  
+document.querySelector(".back-btn").addEventListener("click", function(e) {
+  e.preventDefault();
+
+  document.body.classList.add("fade-out");
+
+  setTimeout(() => {
+    window.location.href = this.href;
+  }, 600);
+});
+
+
+</script>
+
+</body>
