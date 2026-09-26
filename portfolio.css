@@ -79,7 +79,7 @@ h1 {
 
 
 
-.project-left {
+/* .project-left {
     display: flex;
     align-items: flex-start;
     gap: 5rem;
@@ -91,8 +91,8 @@ h1 {
 
 .project-right {
     display: flex;
-    flex-direction: row-reverse; /* Swaps image and text positions */
-    justify-content: flex-start;  /* Keeps content pushed towards the right padding */
+    flex-direction: row-reverse; 
+    justify-content: flex-start;  
     align-items: flex-start;
     gap: 5rem;
 
@@ -100,6 +100,24 @@ h1 {
     margin-bottom: 120px;
     position: relative;
     cursor: pointer;
+} */
+
+.project-left,
+.project-right {
+    display: flex;
+    align-items: center; /* Center image and text vertically */
+    justify-content: flex-start;
+    gap: 4rem;
+
+    max-width: 960px;
+    margin: 0 auto 120px auto; /* Centers cards horizontally */
+    position: relative;
+    cursor: pointer;
+}
+
+/* Reverse flex order for alternating cards */
+.project-right {
+    flex-direction: row-reverse;
 }
 
 
@@ -148,8 +166,10 @@ h1 {
 
 
 .project-text {
-    max-width: 420px;
+    max-width: 500px;
+    margin-bottom: 0;
 }
+
 
 .project-text h2 {
     font-family: 'Inter', sans-serif;
